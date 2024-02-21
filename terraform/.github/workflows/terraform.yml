@@ -27,9 +27,9 @@ env:
      runs-on: ubuntu-latest
      defaults:
        run:
-        shell: bash
-        working-directory: ./terraform
-     
+          shell: bash
+          working-directory: ./terraform
+          
       steps:
         - name: Checkout source code
           uses: actions/checkout@v4
