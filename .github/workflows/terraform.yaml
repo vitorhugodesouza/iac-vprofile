@@ -29,8 +29,7 @@ jobs:
       run:
         shell: bash
         working-directory: ./terraform
-          
-    steps:
+   steps:
     - name: Checkout source code
       uses: actions/checkout@v4
 
@@ -55,6 +54,6 @@ jobs:
       continue-on-error: true
 
     - name: Terraform plan status
-      id: steps.plan.outcome == 'failure'
+      if: steps.plan.outcome == 'failure'
       run: exit 1
 
